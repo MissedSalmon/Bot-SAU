@@ -89,11 +89,11 @@ async function manejarMensaje(from, mensaje) {
     
     // RESPUESTAS PLACEHOLDER DE CADA ÁREA (Para ir completando a mano luego)
     bienestar_q1: 'Respuesta placeholder para Bienestar - Opción 1. Podés agregar la info real acá.',
-    bienestar_q2: 'Respuesta placeholder para Bienestar - Opción 2.',
+  bienestar_q2: 'Fomentamos el bienestar integral de la comunidad UTN FRRe a través de la actividad física. Organizamos prácticas deportivas, torneos, gestionamos la infraestructura y preparamos a nuestros equipos representativos.\n\nSumate a nuestros equipos:\n🏀Basketball\n Femenino: Prof. Natalia Fernández\n Masculino: Prof. Guillermo Tuckey\n\n⚽Futbol\n Femenino: Prof. Julio Yurca\n Masculino: Prof. Gustavo Montes\n\n🏐Voley\n Femenino: Prof. Julia Blasco\n Masculino: Prof. Lucho Puppo\n\n♟️Ajedrez\n Mixto: Prof.Julio Yurca\n\n🏓Pickleball\n Mixto: Prof. Lucho Puppo y Prof. Guillermo Tuckey.',
     graduados_q1: 'Respuesta placeholder para Graduados - Opción 1.',
     pasantias_q1: 'Respuesta placeholder para Pasantías - Opción 1.',
-    becas_q1: 'Becas eMentoring:\nConectan a estudiantes con personas graduadas de la UTN FRRe, especialmente en el exterior. Ofrecen una alternativa de apoyo financiero y/o acompañamiento académico a través de mentorías virtuales para potenciar tu desarrollo\n\nBeca BASE (Ayuda Socio-Económica):\nBrindan apoyo económico a estudiantes en situación de vulnerabilidad para facilitar su acceso y permanencia en la universidad, garantizando la igualdad de oportunidades',
-    becas_q2: 'Respuesta placeholder para Becas - Opción 2.',
+    becas_q1: 'Becas eMentoring:\nConectan a estudiantes con personas graduadas de la UTN FRRe, especialmente en el exterior. Ofrecen una alternativa de apoyo financiero y/o acompañamiento académico a través de mentorías virtuales para potenciar tu desarrollo\n\nBeca BASE (Ayuda Socio-Económica):\nBrindan apoyo económico a estudiantes en situación de vulnerabilidad para facilitar su acceso y permanencia en la universidad, garantizando la igualdad de oportunidades\n\nBecas BIS (Investigación y Servicio):\nImpulsan tu desarrollo académico y profesional mediante la participación en proyectos clave de la UTN, brindando además la posibilidad de acreditar horas electivas',
+    becas_q2: 'Beca Progresar:\nBeca educativa de apoyo económico directo para que continúes tus estudios superiores y te formes profesionalmente en áreas estratégicas.\n\nBeca Manuel Belgrano:\nBeca anual renovable orientada a impulsar tu ingreso y graduación en carreras universitarias clave para el desarrollo tecnológico y productivo del país.',
     cus_q1: 'Respuesta placeholder para CUS - Opción 1.',
   };
 
@@ -237,7 +237,7 @@ async function enviarSubmenuBecas(to) {
   return gateway.post('/whatsapp/messages/interactive/list', {
     to,
     header: 'Área de Becas',
-    body: 'Gestionamos becas (Progresar, Manuel Belgrano, BIS) para garantizar la igualdad de oportunidades universitarias, acompañándote en la inscripción y durante toda tu carrera.\n\nSobre que beca querés consultar, seleccioná una opción:',
+    body: 'Gestionamos becas (Progresar, Manuel Belgrano, BIS, etc.) para garantizar la igualdad de oportunidades universitarias, acompañándote en la inscripción y durante toda tu carrera.\n\nSobre que beca querés consultar, seleccioná una opción:',
     footer: 'Escribí "menu" para volver al inicio',
     buttonText: 'Ver opciones',
     sections: [
