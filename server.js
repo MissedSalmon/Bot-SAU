@@ -92,7 +92,8 @@ async function manejarMensaje(from, mensaje) {
     bienestar_q2: 'Respuesta placeholder para Bienestar - Opción 2.',
     graduados_q1: 'Respuesta placeholder para Graduados - Opción 1.',
     pasantias_q1: 'Respuesta placeholder para Pasantías - Opción 1.',
-    becas_q1: 'Respuesta placeholder para Becas - Opción 1.',
+    becas_q1: 'Becas eMentoring:\nConectan a estudiantes con personas graduadas de la UTN FRRe, especialmente en el exterior. Ofrecen una alternativa de apoyo financiero y/o acompañamiento académico a través de mentorías virtuales para potenciar tu desarrollo\n\nBeca BASE (Ayuda Socio-Económica):\nBrindan apoyo económico a estudiantes en situación de vulnerabilidad para facilitar su acceso y permanencia en la universidad, garantizando la igualdad de oportunidades',
+    becas_q2: 'Respuesta placeholder para Becas - Opción 2.',
     cus_q1: 'Respuesta placeholder para CUS - Opción 1.',
   };
 
@@ -236,14 +237,15 @@ async function enviarSubmenuBecas(to) {
   return gateway.post('/whatsapp/messages/interactive/list', {
     to,
     header: 'Área de Becas',
-    body: 'Seleccioná tu consulta sobre Becas:',
+    body: 'Gestionamos becas (Progresar, Manuel Belgrano, BIS) para garantizar la igualdad de oportunidades universitarias, acompañándote en la inscripción y durante toda tu carrera.\n\nSobre que beca querés consultar, seleccioná una opción:',
     footer: 'Escribí "menu" para volver al inicio',
     buttonText: 'Ver opciones',
     sections: [
       {
         title: 'Becas',
         rows: [
-          { id: 'becas_q1', title: 'Requisitos de becas' },
+          { id: 'becas_q1', title: 'Becas internas' },
+          { id: 'becas_q2', title: 'Becas externas' },
         ],
       }
     ],
