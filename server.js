@@ -90,6 +90,7 @@ async function manejarMensaje(from, mensaje) {
     // RESPUESTAS PLACEHOLDER DE CADA ÁREA (Para ir completando a mano luego)
     bienestar_q1: 'Respuesta placeholder para Bienestar - Opción 1. Podés agregar la info real acá.',
   bienestar_q2: 'Fomentamos el bienestar integral de la comunidad UTN FRRe a través de la actividad física. Organizamos prácticas deportivas, torneos, gestionamos la infraestructura y preparamos a nuestros equipos representativos.\n\nSumate a nuestros equipos:\n🏀Basketball\n Femenino: Prof. Natalia Fernández\n Masculino: Prof. Guillermo Tuckey\n\n⚽Futbol\n Femenino: Prof. Julio Yurca\n Masculino: Prof. Gustavo Montes\n\n🏐Voley\n Femenino: Prof. Julia Blasco\n Masculino: Prof. Lucho Puppo\n\n♟️Ajedrez\n Mixto: Prof.Julio Yurca\n\n🏓Pickleball\n Mixto: Prof. Lucho Puppo y Prof. Guillermo Tuckey.',
+  bienestar_q3: 'SEGUROS\n\n ¿En qué casos se solicita?\n -Visitas técnicas, prácticas supervisadas, viajes de estudio\n\n¿Qué significa que un seguro sea solicitado con Cláusula de No Repetición?\n-Significa que la aseguradora renuncia a reclamar al tercero beneficiado los importes que hubiera pagado por un siniestro\n\n¿Con cuántos días de anticipación debo solicitar el seguro?\n -Con un mínimo de 10 días hábiles si se requiere Cláusula de No Repetición, y en el caso de que no, con un mínimo de 5 días hábiles.\n\n¿Cómo debo solicitarlo?\n -Lo deben solicitar los profesores/directores a cargo completando el siguiente formulario:\n http://bit.ly/SegurosUTNFRRe', 
     graduados_q1: 'Respuesta placeholder para Graduados - Opción 1.',
     pasantias_q1: 'Respuesta placeholder para Pasantías - Opción 1.',
     becas_q1: 'Becas eMentoring:\nConectan a estudiantes con personas graduadas de la UTN FRRe, especialmente en el exterior. Ofrecen una alternativa de apoyo financiero y/o acompañamiento académico a través de mentorías virtuales para potenciar tu desarrollo\n\nBeca BASE (Ayuda Socio-Económica):\nBrindan apoyo económico a estudiantes en situación de vulnerabilidad para facilitar su acceso y permanencia en la universidad, garantizando la igualdad de oportunidades\n\nBecas BIS (Investigación y Servicio):\nImpulsan tu desarrollo académico y profesional mediante la participación en proyectos clave de la UTN, brindando además la posibilidad de acreditar horas electivas',
@@ -191,6 +192,7 @@ async function enviarSubmenuBienestar(to) {
         rows: [
           { id: 'bienestar_q1', title: 'Info sobre el comedor' },
           { id: 'bienestar_q2', title: 'Deportes universitarios' },
+          { id: 'bienestar_q3', title: 'Seguros' },
         ],
       }
     ],
